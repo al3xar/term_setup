@@ -43,8 +43,8 @@ if [ ! -d "$HOME/.warp/themes" ]; then
 fi
 
 # Copy nord.yaml file
-cp ./warp/nord.yaml $HOME/.warp/themes
-cp ./ohmyposh/nord.omp.json $HOME/.config/ohmyposh/themes
+cp ./warp/nord.yaml $HOME/.warp/themes/nord.yaml
+cp ./ohmyposh/nord.omp.json $HOME/.config/ohmyposh/themes/nord.omp.json
 
 # Install LazyLua if not exists
 if [ ! -d "$HOME/.config/nvim" ]; then
