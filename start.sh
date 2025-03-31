@@ -15,7 +15,7 @@ else
     # Install warp terminal
     sudo apt install -y warp-terminal
     # Install lazyvimm deps
-    sudo apt install -y neovim git fzf fd ripgrep luarocks curl lazygit
+    sudo apt install -y neovim git fzf fd-find ripgrep luarocks curl lazygit
 
     # Install warp terminal
     sudo apt install wget gpg
@@ -47,5 +47,8 @@ git clone https://github.com/al3xar/lazy_starter $HOME/.config/nvim
 
 # Install font FiraCode
 oh-my-posh font install FiraCode
-# Install on oh-my-posh theme on zsh
-echo "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/nord.omp.json)\"" >> ~/.zshrc
+
+# Si no existe el comando eval en .zshrc, lo añade
+if ! grep -q "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/nord.omp.json)\"" ~/.zshrc; then
+    echo "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/nord.omp.json)\"" >> ~/.zshrc
+fi
