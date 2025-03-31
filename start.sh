@@ -65,6 +65,6 @@ git clone https://github.com/al3xar/lazy_starter $HOME/.config/nvim
 oh-my-posh font install FiraCode
 
 # Si no existe el comando eval en .zshrc, lo añade
-if ! grep -q "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/nord.omp.json)\"" ~/.zshrc; then
-    echo "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/nord.omp.json)\"" >> ~/.zshrc
+if ! grep -q "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/themes/nord.omp.json)\"" ~/.zshrc; then
+    echo "eval \"\$(oh-my-posh init zsh --config ~/.config/ohmyposh/themes/nord.omp.json)\"" >> ~/.zshrc
 fi
