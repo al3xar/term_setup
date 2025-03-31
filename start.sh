@@ -34,6 +34,14 @@ else
     rm lazygit
 fi
 
+# Create directories if not exists
+if [ ! -d "$HOME/.config/ohmyposh" ]; then
+    mkdir -p $HOME/.config/ohmyposh
+fi
+if [ ! -d "$HOME/.warp/themes" ]; then
+    mkdir -p $HOME/.warp/themes
+fi
+
 # Copy nord.yaml file
 cp ./warp/nord.yaml $HOME/.warp/themes
 cp ./ohmyposh/nord.omp.json $HOME/.config/ohmyposh/themes
