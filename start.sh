@@ -52,11 +52,11 @@ if [ ! -d "$HOME/.config/nvim" ]; then
 fi
 # required
 mv ~/.config/nvim{,.bak}
-
 # optional but recommended
 mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
+rm -rf ~/.config/nvim
 
 # Install LazyLua
 git clone https://github.com/al3xar/lazy_starter $HOME/.config/nvim
