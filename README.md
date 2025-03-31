@@ -8,5 +8,5 @@ Usually I do:
 # Setup
 Run this command for quick setup.
 ```bash
-curl -sL https://github.com/al3xar/term_setup/blob/main/setup.sh | bash
+curl -sL https://raw.githubusercontent.com/al3xar/term_setup/main/setup.sh | bash
 ```
