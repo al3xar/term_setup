@@ -15,7 +15,7 @@ else
     # Install warp terminal
     sudo apt install -y warp-terminal
     # Install lazyvimm deps
-    sudo apt install -y neovim git fzf fd-find ripgrep luarocks curl lazygit
+    sudo apt install -y neovim git fzf fd-find ripgrep luarocks curl
 
     # Install warp terminal
     sudo apt install wget gpg
@@ -24,6 +24,12 @@ else
     sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
     rm warpdotdev.gpg
     sudo apt update && sudo apt install warp-terminal
+    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+    curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+    tar xf lazygit.tar.gz lazygit
+    sudo install lazygit -D -t /usr/local/bin/
+    rm lazygit.tar.gz
+    rm lazygit
 fi
 
 # Copy nord.yaml file
