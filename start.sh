@@ -38,8 +38,16 @@ fi
 if [ ! -d "$HOME/.config/ohmyposh/themes" ]; then
     mkdir -p $HOME/.config/ohmyposh/themes
 fi
+# If linux then create warp themes directory
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    if [ ! -d "$HOME/.local/share/warp-terminal/themes" ]; then
+        mkdir -p $HOME/.local/share/warp-terminal/themes
+        cp ./warp/nord.yaml $HOME/.local/share/warp-terminal/themes/nord.yaml
+    fi
+fi
 if [ ! -d "$HOME/.warp/themes" ]; then
     mkdir -p $HOME/.warp/themes
+    cp ./warp/nord.yaml $HOME/.warp/themes/nord.yaml
 fi
 
 # Copy nord.yaml file
