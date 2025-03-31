@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install neovim git fzf fd ripgrep luarocks curl lazygit
 else
     # Install oh-my-posh
-    sudo apt install -y oh-my-posh
+    curl -s https://ohmyposh.dev/install.sh | bash -s
     # Install warp terminal
     sudo apt install -y warp-terminal
     # Install lazyvimm deps
