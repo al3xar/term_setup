@@ -36,7 +36,7 @@ fi
 
 # Create directories if not exists
 if [ ! -d "$HOME/.config/ohmyposh" ]; then
-    mkdir -p $HOME/.config/ohmyposh
+    mkdir -p $HOME/.config/ohmyposh/themes
 fi
 if [ ! -d "$HOME/.warp/themes" ]; then
     mkdir -p $HOME/.warp/themes
